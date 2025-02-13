@@ -1,0 +1,92 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 0 30px;
+    background: linear-gradient(135deg, #ff6b6b, #ff4757); // Vibrant gradient
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); // Softer shadow
+    position: relative;
+    z-index: 1000;
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        h5 {
+            color: white;
+            font-weight: 700;
+            font-size: 1.3rem;
+            letter-spacing: 1.2px;
+        }
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 25px;
+
+        a {
+            color: white;
+            font-weight: 500;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+            font-size: 1rem;
+
+            &:hover {
+                color: #ffeaa7; // Light yellow hover effect
+                transform: translateY(-2px);
+            }
+        }
+    }
+
+    .button {
+        background: #222;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 10px;
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2);
+
+        &:hover {
+            background: #333;
+            transform: scale(1.05);
+            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.25);
+        }
+    }
+
+    // Mobile Menu
+    .menu-toggle {
+        display: none;
+        cursor: pointer;
+        color: white;
+        font-size: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+        padding: 0 15px;
+
+        .nav-links {
+            display: none; // Hide on small screens
+        }
+
+        .menu-toggle {
+            display: block;
+        }
+
+        .button {
+            padding: 10px 16px;
+        }
+    }
+}

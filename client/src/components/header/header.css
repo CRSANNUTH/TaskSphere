@@ -1,0 +1,15 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(33, 32, 107);
+  align-items: center;
+  height: 60px;
+  padding: 0 20px;
+}
+.header__logo h5 {
+  color: rgb(26, 25, 25);
+  font-weight: 300;
+}
+.header .button {
+  background-color: rgb(37, 34, 34);
+}/*# sourceMappingURL=header.css.map */

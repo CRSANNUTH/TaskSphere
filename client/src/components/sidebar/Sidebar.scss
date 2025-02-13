@@ -1,0 +1,97 @@
+.sidebar {
+    background: linear-gradient(135deg, #004d40, #00796b); // Dark teal gradient
+    color: white;
+    height: 100vh;
+    width: 240px; // Fixed width for better spacing
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.2);
+    :hover {
+    background: linear-gradient(135deg, #050505, #004d40); 
+    color: white;
+    box-shadow: #050505;
+    }
+    
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        img {
+            width: 40px;
+            height: 40px;
+        }
+
+        h4 {
+            font-size: 1.2rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 20px;
+
+        .list-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+            font-size: 0.95rem;
+            font-weight: 500;
+
+            &:hover {
+                background: rgba(255, 255, 255, 0.2);
+                transform: scale(1.05);
+            }
+
+            .icon {
+                font-size: 1.2rem;
+            }
+        }
+
+        .active {
+            background: rgba(255, 255, 255, 0.3);
+            font-weight: bold;
+        }
+    }
+
+    .logout {
+        margin-top: auto;
+        padding: 12px 15px;
+        background: #b71c1c;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+            background: #ff1744;
+            transform: scale(1.05);
+        }
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+        padding: 1rem;
+    }
+
+    .nav-links .list-item {
+        font-size: 0.85rem;
+        padding: 10px;
+    }
+}

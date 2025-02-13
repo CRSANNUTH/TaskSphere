@@ -1,0 +1,181 @@
+@import '../../styles/abstract/mixins';
+
+.signup-form {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to right, #4facfe, #00f2fe); // Light blue gradient
+    @include flex-center(flex, row, center, center);
+
+    &__wrapper {
+        width: 50%;
+        max-width: 450px;
+        padding: 2rem;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+        .form {
+            width: 100%;
+            padding: 1.5rem;
+            @include flex-center(flex, column, center, center);
+
+            .form-group {
+                width: 100%;
+                margin-bottom: 1rem;
+                text-align: center;
+
+                input {
+                    width: 100%;
+                    padding: 12px;
+                    border: 1px solid #ccc;
+                    border-radius: 8px;
+                    font-size: 1rem;
+                    outline: none;
+                    transition: 0.3s ease-in-out;
+
+                    &:focus {
+                        border-color: #4facfe;
+                        box-shadow: 0 0 8px rgba(79, 172, 254, 0.5);
+                    }
+                }
+            }
+
+            .form-button {
+                width: 100%;
+                background: #e20404; // Vibrant Coral Button
+                color: rgb(37, 36, 36);
+                font-size: 1rem;
+                font-weight: bold;
+                padding: 12px;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                transition: all 0.3s ease-in-out;
+
+                &:hover {
+                    background: #ff4757; // Darker red on hover
+                }
+            }
+
+            .signup-footer {
+                margin-top: 1rem;
+                font-size: 0.9rem;
+                color: #555;
+
+                a {
+                    color: #4facfe;
+                    font-weight: bold;
+                    text-decoration: none;
+                    transition: 0.3s;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .signup-form__wrapper {
+        width: 90%;
+        padding: 1.5rem;
+    }
+
+    .signup-form__wrapper .form-group {
+        width: 100%;
+    }
+}
+
+
+
+.signin-form {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to right, #ff9a9e, #fad0c4); // Soft pink gradient
+    @include flex-center(flex, row, center, center);
+
+    &__wrapper {
+        width: 50%;
+        max-width: 450px;
+        padding: 2rem;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+        .form {
+            width: 100%;
+            padding: 1.5rem;
+            @include flex-center(flex, column, center, center);
+
+            .form-group {
+                width: 100%;
+                margin-bottom: 1rem;
+                text-align: center;
+
+                input {
+                    width: 100%;
+                    padding: 12px;
+                    border: 1px solid #ccc;
+                    border-radius: 8px;
+                    font-size: 1rem;
+                    outline: none;
+                    transition: 0.3s ease-in-out;
+
+                    &:focus {
+                        border-color: #ff9a9e;
+                        box-shadow: 0 0 8px rgba(255, 154, 158, 0.5);
+                    }
+                }
+            }
+
+            .form-button {
+                width: 100%;
+                background: #6c5ce7; // Purple Button
+                color: white;
+                font-size: 1rem;
+                font-weight: bold;
+                padding: 12px;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                transition: all 0.3s ease-in-out;
+
+                &:hover {
+                    background: #5a4bcf; // Slightly darker purple on hover
+                }
+            }
+
+            .signin-footer {
+                margin-top: 1rem;
+                font-size: 0.9rem;
+                color: #555;
+
+                a {
+                    color: #6c5ce7;
+                    font-weight: bold;
+                    text-decoration: none;
+                    transition: 0.3s;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .signin-form__wrapper {
+        width: 90%;
+        padding: 1.5rem;
+    }
+
+    .signin-form__wrapper .form-group {
+        width: 100%;
+    }
+}
