@@ -4,16 +4,14 @@
 	"main": "server.js",
 	"license": "MIT",
 	"dependencies": {
-		"concurrently": "^8.2.0"
+		"concurrently": "^8.2.0",
+		"cors": "^2.8.5"
 	},
 	"scripts": {
-  "client": "yarn --cwd client dev",
-  "server": "npx nodemon server/server.js",
-  "build": "cd client && yarn install && yarn build",
-  "start": "node server/server.js",
-  "dev": "concurrently \"yarn server\" \"yarn client\""
+		"client": "yarn --cwd client dev",
+		"server": "npx nodemon server/server.js",
+		"build": "cd client && yarn install && yarn build",
+		"start": "node server/server.js",
+		"dev": "concurrently \"yarn server\" \"yarn client\""
+	}
 }
-
-
-}
-
