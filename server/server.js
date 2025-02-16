@@ -12,10 +12,15 @@ app.use(express.json());
 app.use('/auth', authRoutes);
 app.use('/task', taskRouter);
 
-// localhost:4000/auth/register
+// Adding the route for the root URL
+app.get('/', (req, res) => {
+  res.send('Welcome to the Task Manager API!');
+});
+
+// localhost:8080/auth/register
 
 const port = 8080;
 
 app.listen(port, () => {
-	console.log(`server is running on port`, port);
+  console.log(`server is running on port`, port);
 });
