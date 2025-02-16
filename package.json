@@ -9,10 +9,11 @@
 	"scripts": {
   "client": "yarn --cwd client dev",
   "server": "npx nodemon server/server.js",
-  "build": "cd client && yarn build",
+  "build": "cd client && yarn install && yarn build",
   "start": "node server/server.js",
   "dev": "concurrently \"yarn server\" \"yarn client\""
 }
+
 
 }
 
